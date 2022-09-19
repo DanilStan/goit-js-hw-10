@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+#search-box {
+  font: inherit;
+  padding: 8px;
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  width: 240px;
+  height: 240px;
+}
+
+.list__item {
+  list-style: none;
+}
+
+.country-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.info__image {
+  width: 20px;
+  height: 20px;
+}
+
+.info__item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
