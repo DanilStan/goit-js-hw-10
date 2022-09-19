@@ -15,7 +15,6 @@ function onInput(event) {
   if (inputValue === '') {
     resetFunc(countryInfo, countryList);
   } else {
-    resetFunc(countryInfo, countryList);
     fetchCountries(inputValue).then(value => {
       makcupList(value);
     });
@@ -28,8 +27,7 @@ function resetFunc(clearHtml) {
 
 function makcupList(value) {
   if (value.length > 10) {
-    resetFunc(countryList);
-    resetFunc(countryInfo);
+    resetFunc(countryList, countryInfo);
     Notify.info('Too many matches found. Please enter a more specific name.');
   }
 
