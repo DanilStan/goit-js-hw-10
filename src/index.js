@@ -15,9 +15,13 @@ function onInput(event) {
   if (inputValue === '') {
     resetFunc(countryInfo, countryList);
   } else {
-    fetchCountries(inputValue).then(value => {
-      makcupList(value);
-    });
+    fetchCountries(inputValue)
+      .then(value => {
+        makcupList(value);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 }
 
@@ -28,7 +32,9 @@ function resetFunc(clearHtml) {
 function makcupList(value) {
   if (value.length > 10) {
     resetFunc(countryList, countryInfo);
-    Notify.info('Too many matches found. Please enter a more specific name.');
+    return Notify.info(
+      'Too many matches found. Please enter a more specific name.'
+    );
   }
 
   for (let i = 0; i < value.length; i += 1) {
